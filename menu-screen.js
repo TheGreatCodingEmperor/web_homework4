@@ -8,13 +8,14 @@ class MenuScreen {
 
     const theme = ['candy', 'charlie brown', 'computers', 'dance', 'donuts', 'hello kitty', 'flowers', 'nature', 'turtles', 'space'];
     const input = document.querySelector('#query-input');
-;
-    function getRandom(x){
-      return Math.floor(Math.random()*x);
-    };
-    this.chooseTheme =  theme[getRandom(theme.length)]
-    input.placeholder = this.chooseTheme;
+
+
+    this.chooseTheme =  theme[this.getRandom(theme.length)];
+    input.value = this.chooseTheme;
     // TODO(you): Implement the constructor and add fields as necessary.
+  }
+  getRandom(x){
+    return Math.floor(Math.random()*x);
   }
   // TODO(you): Add methods as necessary.
 }

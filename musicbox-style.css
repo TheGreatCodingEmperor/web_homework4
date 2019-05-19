@@ -31,7 +31,19 @@ TODO(you): Write any additional styles you need here.
     background-image: url("images/play.png");
     background-size:cover;
 }
+.play{
+    background-image: url("images/play.png");
+    background-size:cover;
+}
+.pause{
+    background-image: url("images/pause.png");
+    background-size:cover;
+}
 .screen{
     background-color:white;
     flex-grow:1;
+}
+.Foreground{
+}
+.Backgrounc{
 }

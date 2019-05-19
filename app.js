@@ -9,8 +9,8 @@ class App {
     
     const musicElement = document.querySelector('#music');
     this.music = new MusicScreen();
+    this.getGif = this.music.gif.getGifs.bind(this);
 
-    //this.music.musicDisplay();
     this.musicDisplay = this.music.musicDisplay.bind(this);
     this.onSubmit();
 
@@ -18,17 +18,17 @@ class App {
   }
   onSubmit(){
     let musicDisplay = this.musicDisplay;
-    const submit = document.querySelector('#submit');
-    submit.addEventListener('pointerdown',function(){
+    let getGif = this.getGif;
+    const form = document.querySelector('form');
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
       musicDisplay();
-    });;
-    submit.addEventListener('keypress', function (e) {
-      var key = e.keyCode;
-      if (key === "Enter") { // 13 is enter
-        // code for enter
-        musicDisplay();
-      }
-  });
+      const input = document.querySelector('#query-input');
+      console.log(input.value);
+      const selected = document.querySelector('#song-selector');
+      console.log(selected.value);
+      getGif(selected.value);
+    });
   }
   // TODO(you): Add methods as necessary.
 }

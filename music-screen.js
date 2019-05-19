@@ -31,13 +31,14 @@ class MusicScreen {
         let name = Object.getOwnPropertyNames(json);
         for(let j=0;j<name.length;j++){
           option = document.createElement('option');
+          option.value = json[name[j]].songUrl;
           option.textContent = name[j];
           songSelector.appendChild(option);
         }
-    });
+    })
+    .catch(err =>{console.log(err.text())});
   }
   musicDisplay(){
-    console.log('summon');
     const music = document.querySelector('#music');
     const display = document.createElement('div');
     display.classList.add('display');
