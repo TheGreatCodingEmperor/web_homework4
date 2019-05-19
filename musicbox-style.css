@@ -1,3 +1,37 @@
 /*
 TODO(you): Write any additional styles you need here.
 */
+.display{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position:fixed;
+    padding:0;
+    margin:0;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    background:black;
+    display:flex;
+    flex-direction:column;
+}
+.playScreen{
+    background-color:grey;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:70px;
+    width:100vw;
+}
+.playButton{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background-image: url("images/play.png");
+    background-size:cover;
+}
+.screen{
+    background-color:white;
+    flex-grow:1;
+}
