@@ -53,7 +53,6 @@ class App {
     screen.classList.remove('hide');
     hide.classList.add('hide');
     hide.style.backgroundImage = 'url(' + gifs[this.count] + ')';
-    screen.style.backgroundSize = "100% auto";
     this.count = (this.count + 1) % 25;
   }
   // TODO(you): Add methods as necessary.

@@ -25,7 +25,6 @@ class GifDisplay {
     console.log(this.gifUrls);
     const screen = document.querySelector('.screen');
     screen.style.backgroundImage = 'url(' + array[0] + ')';
-    screen.style.backgroundSize = "100% auto";
   }
   getGifs(){
     return this.gifUrls;
