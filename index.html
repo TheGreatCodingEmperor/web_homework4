@@ -10,11 +10,6 @@
   <link rel="stylesheet" href="musicbox-style.css" />
   <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
-<<<<<<< HEAD
-  <!--script src="./lib/dancer.min.js"></script!-->
-=======
-  !--<script src="./lib/dancer.min.js"></script>
->>>>>>> 5725a6b803a2fc061fcd9d8d6c6fa3c4adef7d19
   <script src="./lib/fetch.js"></script>
   <script src="audio-player.js" defer></script>
   <script src="dancer.js" defer></script>
@@ -48,7 +43,10 @@
   </div>
   <div id="music">
     <div class="layout">
-      <div class="screen"></div>
+      <div class="screen">
+        <div id="fore" class="Foreground hide"></div>
+        <div id="back" class="Background hide"></div>
+      </div>
       <div class="playBar">
         <div class="playButton"></div>
       </div>

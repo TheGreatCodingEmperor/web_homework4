@@ -14,12 +14,15 @@ class MusicScreen {
     this.playButton = new PlayButton();
 
     this.audio = new AudioPlayer();
-
-    this.fetchData();
+    
+    this.fetchSongData();
+    this.gifs = [];
 
     this.button = document.querySelector('.playButton');
     this.play = false;
+    this.count=0;
     this.button.addEventListener('click',(e)=>{
+      e.preventDefault();
       if(!this.play){
         this.playButton.onPlay();
         this.audio.play();
@@ -34,7 +37,7 @@ class MusicScreen {
     
     // TODO(you): Implement the constructor and add fields as necessary.
   }
-  fetchData(){
+  fetchSongData(){
     const songSelector = document.querySelector('#song-selector');
     let option = null;
     fetch("https://fullstackccu.github.io/homeworks/hw4/songs.json")

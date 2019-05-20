@@ -7,10 +7,10 @@ class GifDisplay {
     this.gifUrls = [];
     // TODO(you): Implement the constructor and add fields as necessary.
   }
-  async getGifs(theme){
+  async fetchGifs(theme){
     let key = "s4Q0fPBME3zV327sKLR3irm8cNDXskC5";
     let q = theme;
-    let limit = 2;
+    let limit = 25;
     let rating = "g";
     let array = [];
     await fetch("https://api.giphy.com/v1/gifs/search?q="+q+"&limit="+limit+"&rating="+rating+"&api_key="+key)
@@ -24,11 +24,11 @@ class GifDisplay {
     this.gifUrls = array;
     console.log(this.gifUrls);
     const screen = document.querySelector('.screen');
-    screen.style.backgroundImage="url("+ this.gifUrls[0] +")";
+    screen.style.backgroundImage = 'url(' + array[0] + ')';
     screen.style.backgroundSize = "100% auto";
   }
-  playGifs(){
+  getGifs(){
+    return this.gifUrls;
   }
-
   // TODO(you): Add methods as necessary.
 }
