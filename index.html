@@ -10,9 +10,14 @@
   <link rel="stylesheet" href="musicbox-style.css" />
   <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
+<<<<<<< HEAD
+  <!--script src="./lib/dancer.min.js"></script!-->
+=======
   !--<script src="./lib/dancer.min.js"></script>
+>>>>>>> 5725a6b803a2fc061fcd9d8d6c6fa3c4adef7d19
   <script src="./lib/fetch.js"></script>
   <script src="audio-player.js" defer></script>
+  <script src="dancer.js" defer></script>
 
   <!-- TODO(you): Add any additional scripts here! -->
   <script src="menu-screen.js" defer></script>
@@ -31,7 +36,6 @@
       <form>
         <h2>1. Choose a song:</h2>
         <select id="song-selector">
-          <option>pick your song</option>
         </select>
 
         <h2>2. Choose a theme:</h2>
@@ -42,7 +46,14 @@
       </form>
     </fieldset>
   </div>
-  <div id="music"></div>
+  <div id="music">
+    <div class="layout">
+      <div class="screen"></div>
+      <div class="playBar">
+        <div class="playButton"></div>
+      </div>
+    </div>
+  </div>
 
   <!-- TODO(you): Add the HTML necessary to complete the assignment! -->
 

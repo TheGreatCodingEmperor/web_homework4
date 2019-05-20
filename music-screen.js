@@ -16,6 +16,21 @@ class MusicScreen {
     this.audio = new AudioPlayer();
 
     this.fetchData();
+
+    this.button = document.querySelector('.playButton');
+    this.play = false;
+    this.button.addEventListener('click',(e)=>{
+      if(!this.play){
+        this.playButton.onPlay();
+        this.audio.play();
+        this.play = !this.play;
+      }
+      else{
+        this.playButton.onPause();
+        this.audio.pause();
+        this.play = !this.play;
+      }
+    })
     
     // TODO(you): Implement the constructor and add fields as necessary.
   }
@@ -37,21 +52,6 @@ class MusicScreen {
         }
     })
     .catch(err =>{console.log(err.text())});
-  }
-  musicDisplay(){
-    const music = document.querySelector('#music');
-    const display = document.createElement('div');
-    display.classList.add('display');
-    const screen = document.createElement('div');
-    screen.classList.add('screen');
-    const playScreen = document.createElement('div');
-    playScreen.classList.add('playScreen');
-    const playButton = document.createElement('div');
-    playButton.classList.add('playButton');
-    music.appendChild(display);
-    display.appendChild(screen);
-    display.appendChild(playScreen);
-    playScreen.appendChild(playButton);
   }
   // TODO(you): Add methods as necessary.
 }
